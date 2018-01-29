@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pixel Art Maker</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="menu">
+                    <h2>Choose Grid Size</h2>
+                    <form id="sizePicker">
+                        Grid Height:<br />
+                        <input type="number" id="inputHeight" name="height" min="1" value="1">
+                        <br />
+                        Grid Width:<br />
+                        <input label="Grid Width" type="number" id="inputWidth" name="width" min="1" value="1">
+                    </form>
+                    <br />
+                    <button id="grid" onclick="makeGrid()">Make the Grid!</button>
+                    
+                    <hr />
+
+                    <h2>Pick A Color</h2>
+                    <input type="color" id="colorPicker" onchange="newColor()">
+                    <h2>Past Colors</h2>
+                    <div id="colorHistory">
+                        <!-- <div class="old_color"></div>
+                        <div class="old_color"></div>
+                        <div class="old_color"></div>
+                        <div class="old_color"></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="canvas">
+                    <h2>Design Canvas</h2>
+                    <div id="pixelCanvas">
+                    </div>
+                    
+                    <script src="designs.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
